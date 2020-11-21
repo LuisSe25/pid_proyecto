@@ -58,13 +58,13 @@
 <script type="text/javascript">
 function validarfor(){
     
-    var monto = document.getElementByName("monto")[0].value; 
+    var monto = document.getElementById("id_monto").value; 
     
-    var expr = /^[0-9]$/;
+    var expr = /[A-Za-z ñ]+/;
     
     
-    if ( !expr.test(monto) ){                                                            //COMPRUEBA MAIL
-        alert("Error: El monto " + correo + " es letra, el monto debe ser numero.");
+    if ( expr.test(monto) ){                                                            //COMPRUEBA MAIL
+        alert("Error: El monto " + monto + " es letra, el monto debe ser numero.");
         return false;
     }
     
