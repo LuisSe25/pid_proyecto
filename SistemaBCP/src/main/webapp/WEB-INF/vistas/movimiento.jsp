@@ -35,7 +35,7 @@
 		    
 			<div class="form-group">
 				<label class="control-label" for="id_monto">Monto</label>
-				<input class="form-control" type="text" id="id_monto" name="monto" placeholder="Ingrese el codigo">
+				<input class="form-control" type="number" id="id_monto" name="monto" placeholder="Ingrese el codigo">
 			</div>
 			
 			<div class="form-group">
@@ -61,6 +61,60 @@ $.getJSON("cargaCuenta", {}, function(data){
 	$.each(data, function(index,item){
 		$("#id_cuenta_ori").append("<option value="+item.numero +">"+ item.numero +"</option>");
 	});
+});
+
+$('#id_form').bootstrapValidator({
+    message: 'This value is not valid',
+    feedbackIcons: {
+        valid: 'glyphicon glyphicon-ok',
+        invalid: 'glyphicon glyphicon-remove',
+        validating: 'glyphicon glyphicon-refresh'
+    },
+    fields: {
+    	"monto": {
+    		selector : '#id_monto',
+            validators: {
+                notEmpty: {
+                    message: 'El monto es un campo obligatorio'
+                },
+          
+            }
+        } 
+});
+</script>
+
+<script type="text/javascript">
+$('#id_form_actualiza').bootstrapValidator({
+    message: 'This value is not valid',
+    feedbackIcons: {
+        valid: 'glyphicon glyphicon-ok',
+        invalid: 'glyphicon glyphicon-remove',
+        validating: 'glyphicon glyphicon-refresh'
+    },
+    fields: {
+    	"nombre": {
+    		selector : '#id_act_nombre',
+            validators: {
+                notEmpty: {
+                    message: 'El nombre es un campo obligatorio'
+                },
+                stringLength :{
+                	message:'El nombre es de 5 a 100 caracteres',
+                	min : 5,
+                	max : 100
+                }
+            }
+        },
+        "sistemaEvaluacion.idSistemaEvaluacion": {
+    		selector : '#id_reg_sistema_evaluacion',
+            validators: {
+            	notEmpty: {
+                    message: 'El sistema de evaluacion es un campo obligatorio'
+                }
+            }
+        }
+      
+    }   
 });
 </script>
 
