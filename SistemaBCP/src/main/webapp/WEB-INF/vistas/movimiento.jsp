@@ -67,12 +67,7 @@ $.getJSON("cargaCuenta", {}, function(data){
 </script>
 <script type="text/javascript">
 $('#id_form').bootstrapValidator({
-    message: 'This value is not valid',
-    feedbackIcons: {
-        valid: 'glyphicon glyphicon-ok',
-        invalid: 'glyphicon glyphicon-remove',
-        validating: 'glyphicon glyphicon-refresh'
-    },
+
     fields: {
     	"monto": {
     		selector : '#id_monto',
