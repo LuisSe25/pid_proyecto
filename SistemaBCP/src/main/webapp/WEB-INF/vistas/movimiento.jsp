@@ -63,6 +63,9 @@ $.getJSON("cargaCuenta", {}, function(data){
 	});
 });
 
+
+</script>
+<script type="text/javascript">
 $('#id_form').bootstrapValidator({
     message: 'This value is not valid',
     feedbackIcons: {
@@ -83,11 +86,10 @@ $('#id_form').bootstrapValidator({
           
             }
         } 
-
+    }
 });
+
 </script>
-
-
 
 
 <div class="container" >
