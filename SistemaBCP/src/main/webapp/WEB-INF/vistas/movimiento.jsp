@@ -80,26 +80,7 @@ $.getJSON("cargaCuenta", {}, function(data){
 
 
 </script>
-<script type="text/javascript">
-$('#id_form').bootstrapValidator({
 
-    fields: {
-    	"monto": {
-    		selector : '#id_monto',
-            validators: {
-                notEmpty: {
-                    message: 'El monto es un campo obligatorio'
-                },
-                integer : {
-			           message : 'El monto es un número '
-			    },
-          
-            }
-        } 
-    }
-});
-
-</script>
 
 
 <div class="container" >
