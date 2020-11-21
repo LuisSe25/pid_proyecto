@@ -24,7 +24,7 @@
 <h4>Tranferencia BCP</h4>
 <h4>Bienvenido Sr(a): ${sessionScope.objCliente.nombre}  ${sessionScope.objCliente.apellido}</h4>                
 
-	<form action="tranferencia" id="id_form" method="post"> 
+	<form action="tranferencia" id="id_form" method="post" onSubmit="return validarfor();"> 
 		
 			<div class="form-group">
 				<label class="control-label" for="id_cuenta_ori">Cuenta Origen</label>
