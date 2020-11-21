@@ -55,7 +55,22 @@
 
 
 </div>
-  
+<script type="text/javascript">
+function validarfor(){
+    
+    var monto = document.getElementByName("monto").value; 
+    
+    var expr = /^[0-9]$/;
+    
+    
+    if ( !expr.test(monto) ){                                                            //COMPRUEBA MAIL
+        alert("Error: El monto " + correo + " es letra, el monto debe ser numero.");
+        return false;
+    }
+    
+    return true;
+    }
+</script>
 <script type="text/javascript">
 $.getJSON("cargaCuenta", {}, function(data){
 	$.each(data, function(index,item){
