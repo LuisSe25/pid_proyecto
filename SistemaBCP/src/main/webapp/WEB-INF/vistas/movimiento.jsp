@@ -58,7 +58,7 @@
 <script type="text/javascript">
 function validarfor(){
     
-    var monto = document.getElementByName("monto").value; 
+    var monto = document.getElementByName("monto")[0].value; 
     
     var expr = /^[0-9]$/;
     
